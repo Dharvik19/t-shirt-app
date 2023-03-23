@@ -11,7 +11,8 @@ const CartProvider = (props) => {
     cart.forEach((product,index) => {
       if (item.title === product.title) {
         arr[index].amount = Number(item.amount)+Number(arr[index].amount)
-        arr[index].size = item.size + arr[index].size;
+        
+        arr[index].size = arr[index].amount  + arr[index].size;
         isPresent = true;
         let {_id,...updateData}= arr[index];
 
